@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axie Infinity - Energy Calculator Tracker by Dannison Ocampo - Mini Version</title>
+    <link rel="icon" type="image/png" href="http://tech-son.com/axie-favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="http://tech-son.com/img/axielogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <meta name="description" content="Gamitin mo ito para win streak ka!" />
+    <meta name="robots" content="follow, index" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Axie Infinity - Energy Tracker by Tech-son" />
+    <meta property="og:description" content="Axie Infinity Energy Calculator: This tool serves to facilitate the calculation of the enemy's energy in the Arena." />
+    <meta property="og:url" content="http://tech-son.com" />
+    <meta property="og:site_name" content="Axie Infinity - Energy Calculator Tracker by Tech-son" />
+    <meta property="og:image" content="http://tech-son.com/img/axie-meta.jpg" />
+    <meta property="og:image:secure_url" content="http://tech-son.com/img/axie-meta.jpg" />
+    <meta property="og:image:width" content="522">
+    <meta property="og:image:height" content="296">
+    <meta property="og:image:alt" content="Axie Infinity Energy Calculator" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Axie Infinity Energy Calculator" />
+    <meta name="twitter:description" content="Axie Infinity Energy Calculator: This tool serves to facilitate the calculation of the enemy's energy in the Arena." />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q06ZNPSP9G"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Q06ZNPSP9G');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css?t=143" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4276954411890126" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="bg-overlay">
+        <div class="container">
+            <div class="div-wrapper">
+
+                <div id="help-text-wrapper" class="help-text-wrapper">
+                    <div class="help-content">
+                        <h1 class="title">Axie Infinity Energy Calculator</h1>
+                        <h2>Your Axie infinity swiss knife. All in one tracking tool for Axie Infinity players.</h2>
+
+                        <h3>What is Axie Infinity Energy Calculator?</h3>
+                        <p>This tool will help you better strategize your match in the arena inside the NFT game Axie Infinity.</p>
+
+                        <h3>How to use this Energy Calculator?</h3>
+                        <p>The Axie Energy Calculator is not just an "Energy Calculator" anymore. The tool has evolved by the help of its active users. With the help of this tool, you can now track your energy consumption in the arena. You can also keep
+                            track your Win, Loss, and Draw in the Arena. Also, an SLP (Smooth Love Potion) tracker and a card tracking tool has been added.</p>
+
+                        <p>To increment a value, you can just tap the buttons and tap on the labels to decrease the value. More in-depth tutorial will be published soon. For now, the following shortcut keys are present:</p>
+
+                        <ul>
+                            <li>a - Deduct 1 Energy used</li>
+                            <li>q - Add 1 Energy used</li>
+                            <li>s - Deduct 1 Energy gain</li>
+                            <li>w - Add 1 Energy gain</li>
+                            <li>d - Deduct 1 Energy destroyed</li>
+                            <li>e - Add 1 Energy destroyed</li>
+                            <li>f - End turn</li>
+                            <li>r - Reset</li>
+                            <li>u - Undo</li>
+
+                        </ul>
+
+                        <h3>Axie Infinity Tool Tips and Trick?</h3>
+                        <p class="center">
+                            <img class="img-responsive bg-white" src="img/axie-infinity-diagram.png">
+                        </p>
+
+
+                    </div>
+
+                    <div class="help-footer">
+                        <button id="help-footer-close">Close</button>
+                    </div>
+
+                </div>
+
+
+                <div class="left-floating-widget">
+
+                    <div class="arena-widget-wrapper">
+
+                        <div class="slp-icon-wrapper floating-item">
+                            <button id="" class="win floating-btn">W</button>
+                            <label id="">0</label>
+
+                        </div>
+
+                        <div class="slp-icon-wrapper floating-item">
+                            <button id="" class="lose floating-btn">L</button>
+                            <label id="">0</label>
+
+                        </div>
+
+                        <div class="slp-icon-wrapper floating-item">
+                            <button id="" class="draw floating-btn">D</button>
+                            <label id="">0</label>
+
+                        </div>
+
+                        <div class="slp-icon-wrapper floating-item">
+                            <button id="" class="clear floating-btn"><i class="fas fa-sync"></i></button>
+
+                        </div>
+                    </div>
+
+                    <div class="slp-tracker-wrapper">
+                        <div class="slp-icon-wrapper floating-item">
+
+                            <!-- 
+
+                <div class="slp-calc">
+				
+                    <div class="slp-calc-output-wrap">
+                        <input type="text" id="slp-calc-display">
+                    </div>
+					
+                    <div class="slp-calc-input-wrap">
+                        <div class="slp-calc-input-row">
+                            <button id="calc-key-7" value="7" class="slp-calc-input-col num">7</button>
+                            <button id="calc-key-8" value="8" class="slp-calc-input-col num">8</button>
+                            <button id="calc-key-9" value="9" class="slp-calc-input-col num">9</button>
+                            <button id="calc-key-plus" value="+" class="slp-calc-input-col operator">+</button>
+                        </div>
+
+                        <div class="slp-calc-input-row">
+                            <button id="calc-key-4" value="4" class="slp-calc-input-col num">4</button>
+                            <button id="calc-key-5" value="5" class="slp-calc-input-col num">5</button>
+                            <button id="calc-key-6" value="6" class="slp-calc-input-col num">6</button>
+                            <button id="calc-key-minus" value="-" class="slp-calc-input-col">Del</button>
+                        </div>
+
+                        <div class="slp-calc-input-row">
+                            <button id="calc-key-1" value="1" class="slp-calc-input-col num">1</button>
+                            <button id="calc-key-2" value="2" class="slp-calc-input-col num">2</button>
+                            <button id="calc-key-3" value="3" class="slp-calc-input-col num">3</button>
+                            <button id="calc-key-equals" value="=" class="slp-calc-input-col operator">=</button>
+                        </div>
+
+                        <div class="slp-calc-input-row">
+                            <button class="slp-calc-input-col blank"></button>
+                            <button id="calc-key-0" value="0" class="slp-calc-input-col num">0</button>
+                            <button class="slp-calc-input-col blank"></button>
+                            <button id="calc-key-clear" value="C" class="slp-calc-input-col blank">C</button>
+
+                        </div>
+                    </div>
+                </div>
+				
+				SLP CALCULATOR -->
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="form-options-wrapper">
+
+                        <div class="slp-icon-wrapper floating-item">
+                            <button id="" class="undo floating-btn inactive">Undo</button>
+
+                        </div>
+
+                        <div class="slp-icon-wrapper floating-item">
+                            <button id="" class="reset floating-btn">Reset</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div class="right-floating-widget">
+
+                    <!-- ARENA TRACKER OVERLAY -->
+                    <div>
+
+                        <div class="win-draw-lose-wrapper">
+                            <div id="win-wrap" class="floating-item">
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <h3 id="round-text">Round <span>1</span></h3>
+                <h2 id="current-energy">3</h2>
+
+                <label>Energy Used</label>
+                <div class="options-wrapper">
+                    <button id="energy-used-minus" class="minus-btn btn option-text"><span id="energy-used-text">0</span></button>
+                    <button id="energy-used-add" class="add-btn btn"><span>+</span></button>
+                </div>
+
+                <label>Energy Gained</label>
+                <div class="options-wrapper">
+                    <button id="energy-gained-minus" class="minus-btn btn option-text"><span id="energy-gained-text">0</span></button>
+                    <button id="energy-gained-add" class="add-btn btn"><span>+</span></button>
+                </div>
+
+                <label>Energy Destroyed</label>
+                <div class="options-wrapper">
+                    <button id="energy-destroyed-minus" class="minus-btn btn option-text"><span id="energy-destroyed-text">0</span></button>
+                    <button id="energy-destroyed-add" class="add-btn btn"><span>+</span></button>
+                </div>
+
+                <div class="end-turn-wrapper">
+                    <button id="end-turn" class="btn end-turn-btn">End Turn</button>
+
+                </div>
+                <div class="options-wrapperz">
+
+                    <label id="axie-front-txt">8</label>
+                    <button id="axie-front-btn" class="floating-btn" title="Win">-<img src="img/axieaqua.png" width="300%" height="300%"></button>
+
+
+                    <label id="axie-middle-txt">8</label>
+                    <button id="axie-middle-btn" class="floating-btn" title="Lose">-<img src="img/axieplant.png" width="350%" height="350%"></button>
+
+                    <label id="axie-back-txt">8</label>
+                    <button id="axie-back-btn" class="floating-btn" title="Draw">-<img src="img/axiebird.png" width="290%" height="290%"></button>
+
+                    <button id="clear-btn" title="Reload" class="close"><i class="fas fa-sync-alt"></i>Clear</button>
+                </div>
+                <div class="options-wrapper">
+                    <img src="img/yugi.png" size="15%"><img src="img/kaiba.png" width="200px" height="200px">
+
+                </div>
+                <div class="end-turn-wrapper">
+                    <center>
+
+                        <img src="img/shortcuts.png" width="100%" height="100%">
+                    </center>
+
+
+                </div>
+                <!-- <div class="reset-wrapper">
+                <button id="undo-btn" class="btn end-turn-btn inactive"><i class="fas fa-redo"></i></button>
+                <button id="reset-btn" class="btn end-turn-btn">Reset</button>
+                
+            </div> -->
+
+                <div class="ads-wrapper">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4276954411890126" crossorigin="anonymous"></script>
+                    <!-- Axie Calculator -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4276954411890126" data-ad-slot="9764137049" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+
+            </div>
+
+
+            <div class="article-wrapper">
+                <article>
+                    <h1 class="title">Axie Infinity Energy Calculator</h1>
+                    <h2>Your Axie infinity swiss knife. All in one tracking tool for Axie Infinity players.</h2>
+
+                    <p>Arena now seems to be the main source of Smooth Love Potion (SLP) in Axie Infinity. With the latest update, PVP is now becoming more competitive and more decisive or critical. One of the common strategies that will help you improve
+                        your chances of winning in the Arena is through Energy Calculation. This is done by counting the energy used, gained, and lossed by your opponent for each round in the Arena. </p>
+
+                    <p>This will help you strategically optimize your energy consumption and it could also help you predict your opponent's next move when battling in the Arena. Remembering the energy of your opponents is sometimes challenging or nerve-racking.
+                        Sometimes, when playing, we get distracted with many things and because of that we lose track of our energy calculation. That's where this Axie Energy Calculator comes handy. With the help of this tool, you will keep track of your
+                        opponents Energy consumption with just few clicks.</p>
+
+                    <p>Right now, The Axie Energy Calculator, is not just an "Energy Calculator" anymore. The tool has evolved progressively since the time it was created with the help of its active users in the Axie Community. The Axie Energy Calculator
+                        now has an Arena Tracker, SLP Tracker and a Card Tracker. The Arena Tracker will let you keep track of your Win, Loss, and Draw in the Arena. Using the SLP Tracker, you can compute the SLP you have earned in the Arena. And lastly,
+                        the Card Tracker will let track the number of cards your opponent has for each round during your battle in the arena.</p>
+
+
+                    <h3>HOW TO USE THE AXIE ENERGY CALCULATOR</h3>
+
+                    <p>As of the moment, we have three variations of the Energy calculator. We have simple, standard, and advance calculator.</p>
+
+                    <h4>SIMPLE ENERGY CALCULATOR</h4>
+                    <p>The simple calculator is composed of the Energy Buttons (plus and minus), End Turn button, Reset Button and the Undo Button. The simple energy calculator also has an Arena Tracker. In order to keep track of your opponent's energy,
+                        you simply click on the plus or minus button. You add one energy whenever your opponent uses/loses energy. And you click on the minus button whenever your opponent gains an energy. Click on the "End Turn" button to calculate your
+                        opponents energy for the next round. The tool will do it's magic after you hit the "End Turn" button. You can click on the "Undo" button whenever you commit mistakes after hitting the "End Turn" button. You can only revert back
+                        each round once. When you finish a match, you click on the "Reset" button to reset the calculator. </p>
+
+                    <image view>
+
+                        <p>For the Arena tracker, When you finish a match just simply click on the "W" button if you won a game, "L" when you lose, and "D" when the match is a draw. If you mistakenly added values in the Arena Tracker, you can simply tap
+                            on the it's associated label to deduct a value. You can also reset the Arena Tracker by clicking on the clear button below the "D" button.</p>
+
+                        <p><img src="img/simple-energy-calculator.jpg" class="img-responsive" alt="axie energy calculator anatomy"></p>
+
+
+                        <h4>STANDARD ENERGY CALCULATOR</h4>
+                        <p>The standard energy calculator is somewhat similar to the simple energy calculator. The main difference is that in the Simple Energy Calculator, we use only two buttons to either add or deduct energy used/losed by your opponents
+                            while in the Standard Energy Calculator, there are now 3 sets of options to keep track of yoru opponents energy consumptions. The first set of buttons is for the energy used, you simply add whenever your opponent uses an energy.
+                            Then you can simply click on the minus button if you have clicked the add button wrongly. The second set is for the Energy Gained( when your opponent gains an energy you just simply update it's value). And the last one is for
+                            the Energy Destroyed ( updated it's value when ever your opponent's energy got destroyed). </p>
+
+                        <h4>ADVANCE CALCULATOR</h4>
+                        <p>The Advance Energy Calculator, is an improvised version of the Standard Energy Calculator. The main difference between the Advance Energy Calculator and the Standard Energy Calculator is that, the Advance Energy Calculator has
+                            an SLP Tracker and a Card Tracker. The energy calculation works similar to the standard Energy Calculator.</p>
+
+                        <p><img src="img/axie-energy-calculator-anatomy.jpg" class="img-responsive" alt="axie energy calculator anatomy"></p>
+
+                        <h4>SLP Tracker</h4>
+                        <p>To use the SLP Calculator, you simply tap on the SLP Icon, floating on the left side of the calculator. A mini calculator will popout after clicking the SLP Icon. You simply input your SLP gained for each match in the arena in
+                            the SLP Calculator. The SLP calculator will create a summation of your gained SLP.</p>
+                        <image - slp calculator>
+
+                            <h4>Card Tracker</h4>
+                            <p>The Card Tracker is to keep track on how many cards does your opponent have for every round in each match. You simply click on the card icon floting in the right side of the calculator to show/hide the options for you to track
+                                your opponent's cards. Whenever the opponent uses a card, you add 1 to the "Use Card" setting by clicking on the "Use" button which is located floating on the right side of the Advance Energy Calculator. If you have accidentally
+                                tapped the button too many times, you can click on the label beside it to deduct its value. Click on the "Draw" button whenever the opponent draws a card and Click on the "Discard" button whenver he/she discards a card.
+                                Same thing, click on the label beside the button if you commit mistakes. The calculator will do the computation for the cards after you hit the "End Turn" button. The card tracker will also reset when the "Reset" button
+                                is pressed. The cards for each round will be displayed in the right side of the screen.</p>
+
+                            <image card-tracker>
+
+
+                                <h3>Axie Infinity Classes Chart</h3>
+                                <p class="center">
+                                    <img class="img-responsive bg-white" alt="axie infinity diagram" src="img/axie-infinity-diagram.png">
+                                </p>
+
+                                <h3>Axie Infinity Adventure Experience &amp; SLP Guide</h3>
+                                <p class="center">
+                                    <a href="adventure-exp-slp-guide.jpg"><img class="img-responsive bg-white" alt="Axie Infinity Adventure Experience and SLP Guide" src="img/adventure-exp-slp-guide.jpg"></a><br>
+                                    <small>Image from <a href="https://www.facebook.com/AxiesAlertsPH/">Axie Alerts PH</a></small>
+                                </p>
+
+
+                                <h3>AXIE INFINITY Arena SLP Rewards</h3>
+                                <p class="center">
+                                    <a href="arena-mode-slp-rewards.png"><img style="width: 100%" class="img-responsive bg-white" alt="axie infinity diagram" src="img/arena-mode-slp-rewards.png"></a><br>
+                                    <small>Image from <a href="https://www.facebook.com/AxiesAlertsPH/">Axie Alerts PH</a></small>
+                                </p>
+
+
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="copy">
+            <p>Please consider donating to: <button onClick="getRonin()" id="ronin">Ronin</button><input style="display:none" id="roninID" type="text" value="ronin:c8633b5465655920d3c070bb3f510faddf6a6323"> GCash: 09672103519 | <a href="https://xvideos.com">Paypal</a>                </p>
+            <p>Made by <a href="https://www.facebook.com/danny.bart.39">Danizone</a> | QA by <a href="https://pornhub.com">11 5 14 14 5 20 8 </a></p>
+            <p><strong>We're NOT affiliated with Axie Infinity. This is a fan site dedicated to the game</strong></p>
+            <p><a href="https://tech-son.com/">Axie Energy Calculator</a> | Copyright 2021 | All Rights Reserved | <a href="https://tech-son.com/privacypolicy.html">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+
+
+    <script src="js/script.js?t=162"></script>
+
+
+
+</body>
+
+</html>
