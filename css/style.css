@@ -1,0 +1,1001 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+    touch-action: manipulation;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -10;
+}
+
+.center {
+    text-align:center;
+}
+.container {
+    height: fit-content;
+    padding-bottom: 200px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Fredoka One', cursive;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.bg-overlay {
+    background: #c07f5aad;
+}
+
+.div-wrapper {
+    text-align: center;
+    color: white;
+    padding: 0.5rem;
+}
+
+h3#round-text {
+    font-size: 1.2rem;
+}
+
+h2#current-energy {
+    font-size: 5rem;
+    margin: 0rem;
+}
+
+
+.btn {
+    background: #00B1CB;
+    border: 6px solid #5D330B;
+    border-radius: 10px;
+    height: 70px;
+    width: 70px;
+    color: white;
+    font-family: 'Fredoka One';
+    font-size: 54px;
+    line-height: 70px;
+    cursor: pointer;
+}
+
+
+.btn span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    height: 34px;
+    margin-top: -68px;
+}
+.minus-btn {
+    background: #DB4647;
+}
+
+button#end-turn {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1;
+    background: #FFAC00;
+    text-shadow: 2px 4px 0px #8e6f6f;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+button.end-turn-btn {
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1;
+    background: #F0C66E;
+    text-shadow: 2px 4px 0px #8e6f6f;
+    margin-top: 0.5rem;
+}
+
+button#end-turn:active {
+    background: #d8b770;
+}
+
+button#reset-btn {
+    background-color: #DB4647;
+    cursor: pointer;
+}
+
+button#reset-btn:active {
+    background: #DB4647;
+}
+
+.btn.add-btn:active {
+    background: #008da2;
+}
+
+.btn.minus-btn:active {
+    background: #923838;
+}
+
+button#undo-btn {
+    background: #d2761e;
+}
+
+button#undo-btn:active {
+    background: #af6219;
+}
+
+button#undo-btn.inactive {
+    background-color: #bba188;
+    color: #ffffff;
+    border-color: #71604f;
+    cursor: initial;
+}
+
+
+.reset-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0rem;
+}
+
+.options-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    gap: 1rem;
+}
+
+.options-wrapperz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    border-collapse: collapse;
+    z-index: 1;
+    position:relative;
+	
+}
+
+
+.option-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    width: 30px;
+}
+
+.options-wrapper .btn.option-text {
+    width: 70px;
+    height: 70px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+
+.options-wrapper .btn.option-text span {
+    height: 56px;
+    margin: 0px;
+}
+
+button#ronin {
+    display: block;
+    margin: 2px auto;
+    background: #225eaa;
+    color: white;
+    border: 1px solid blue;
+    padding: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background: #5d330b;
+    text-align: center;
+    font-family: Calibri;
+    font-size: small;
+    padding: 1rem;
+    color: #bfbfbf;
+}
+
+footer a {
+    color: #f0c66e;
+}
+
+footer strong {
+    font-weight: bold;
+    color: #f0c66e;
+    margin: 1rem;
+    display: inline-block;
+    background: #3c2324;
+    padding: 1rem;
+}
+
+/** FLOATING LEFT WIDGET **/
+.floating-btn {
+    background: red;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border: 4px solid #5d330b;
+    border-radius: 0px 10px 10px 0px;
+    font-family: "Fredoka One";
+	background-image: url("img/cardback.png") ;
+}
+
+.left-floating-widget {
+    position: absolute;
+    top: 30px;
+    left: -5px;
+}
+
+.floating-item {
+    display: flex;
+    align-items: center;
+}
+
+.floating-item label {
+    background: #5d330b99;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.crass
+{
+	
+width: 500px;
+text-align: center;	
+display: block;
+float: relative;
+padding: 5px;
+}
+
+.floating-item label {
+    display: block;
+    margin-left: 0.5rem;
+    margin-top: -11px;
+}
+
+button#axie-front-btn {
+  background-color: #FFaaFF;
+}
+
+button#axie-middle-btn {
+    background-color: #923838;
+}
+
+button#axie-back-btn {
+    background-color: #4b5e77;
+}
+
+button#clear-btn i {
+    margin-right: 0.5rem;
+}
+button#clear-btn {
+    background-color: #EFAA29;
+    color: white;
+    text-transform: uppercase;
+}
+
+button#axie-front-btn:active {
+    background-color: #efa926;
+}
+
+button#axie-middle-btn:active {
+    background-color: #ac3030;
+}
+
+button#axie-back-btn:active {
+    background-color: #90959c;
+}
+
+button#clear-btn:active {
+    background-color: #c98d1e;
+
+}
+
+.reset-undo-wrapper .floating-btn {
+    width: 64px;
+    height: 49px;
+}
+
+.reset-undo-wrapper {
+    margin-top: 20px;
+}
+
+.form-options-wrapper {
+    /* margin-top: 106px; */
+    margin-left: -6px;
+    margin-top: 90px;
+}
+
+.form-options-wrapper button.floating-btn {
+    background: #BC7955;
+    z-index: 2;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    width: 60px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.form-options-wrapper button.floating-btn.undo.inactive {
+    background: #bba188;
+    border-color: #71604f;
+}
+
+.form-options-wrapper button.floating-btn.undo {
+    background: #d2761e;
+}
+
+.form-options-wrapper button.floating-btn.reset {
+    background: #db4647;
+}
+
+.arena-widget-wrapper button.floating-btn {
+    background: #BC7955;
+    z-index: 2;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+}
+
+.arena-widget-wrapper .floating-item label {
+    background: #5d330b99;
+    display: block;
+    width: 100%;
+    height: 38px;
+    line-height: 40px;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.arena-widget-wrapper {
+    padding-top: 1rem;
+    border: 2px dashed;
+    padding-right: 10px;
+    margin-top: 10px;
+    border-left: none;
+    padding-bottom: 5px;
+    display:none;
+}
+
+
+/** FLOATING RIGHT VARIANTS **/
+.right-floating-widget {
+ position: relative;
+}
+.right-floating-widget .floating-btn {
+	top: 0px;
+    background: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+    border: 4px solid #5d330b;
+    border-radius: 10px 0px 0px 10px;
+    font-family: "Fredoka One";
+	 position: relative;
+}
+
+
+.right-floating-widget .variation-wrapper .floating-btn:hover{
+    width: 89px;
+    transition: width 0.5s;
+}
+
+
+button#simple-btn {
+    background: #479529;
+}
+
+button#standard-btn {
+    background-color: #E99D57;
+}
+
+button#advance-btn {
+    background: #8E1A4F;
+}
+
+
+/** FLOATING RIGHT HELP **/
+.right-floating-widget {
+    position: absolute;
+    top: 5px;
+    right: 15%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.help-icon-wrapper i {
+    font-size: 32px;
+    border-radius: 360px;
+    color: #ffffffc2;
+    border: 5px solid #5d330b9e;
+}
+
+.help-text-wrapper {
+    background: #5d320ae8;
+    /* padding: 1rem; */
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    top: 0px;
+    padding: 10px;
+    width: 100%;
+    font-family: "Calibri","Open Sans", sans-serif;
+    font-weight: bold;
+    text-align: left;
+    display: none;
+    z-index: 99;
+}
+
+.help-text-wrapper h5 {
+    font-size: 1.2rem;
+}
+
+.help-content {
+    width: 99%;
+    /* background: #4a4036; */
+    margin: 0px auto;
+    max-height: 520px;
+    overflow-y: scroll;
+}
+
+button#help-footer-close {
+    width: 100%;
+    max-width: 200px;
+    margin: 0px auto;
+    display: block;
+    margin-top: 1rem;
+    font-family: 'Fredoka One';
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 5px solid #381f07;
+    color: white;
+    background: #DB4647;
+}
+
+button.close {
+    width: 50%;
+    max-width: 100px;
+    margin-top: 0.2rem;
+    font-family: 'Fredoka One';
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    border-radius: 50px;
+    border: 3px solid #381f07;
+    color: white;
+    background: #DB4647;
+}
+
+.help-content h1.title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.help-content h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #ffd280;
+    margin-bottom: 1rem;
+}
+
+.help-content h3 {
+    background: #ff5549;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.help-content p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+img.img-responsive.bg-white {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    max-width: 320px;
+    margin: 0px auto;
+}
+
+
+/** SLP CALCULATOR **/
+
+button#slp-icon img {
+    width: 100%;
+}
+
+button#slp-icon {
+    background: #BC7955;
+    z-index: 2;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+}
+
+.slp-tracker-wrapper {
+    margin-top: 112px;
+}
+
+
+
+.slp-calc-wrap.popup-overlay {
+    position: absolute;
+    width: 100%;
+    background: #683c15d9;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    display:none;
+}
+
+label#slp-txt {
+    z-index: 0;
+    margin-left: 0.5rem;
+    margin-bottom: 6px;
+}
+
+.slp-calc-input-wrap {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+
+
+.slp-calc-input-row {
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.slp-calc-input-col {
+    background: #415945;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Fredoka One';
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.slp-calc-input-col.num {
+    background: #1b2b1e;
+}
+
+
+
+.slp-calc {
+    width: 50%;
+    margin: 2rem auto;
+    min-width: 250px;
+    max-width: 480px;
+}
+
+.slp-calc input[type="text"] {
+    width: 100%;
+    /* height: 50px; */
+    color: white;
+    font-size: 2rem;
+    font-family: 'Fredoka One';
+    border-radius: 5px;
+    border: 2px solid white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    text-align: right;
+    background: #415945;
+}
+
+.slp-calc input[type="text"]:focus {
+    outline: none;
+}
+
+button#calc-key-clear {
+    background: #bd5283;
+}
+
+button#calc-key-equals {
+    background: #EFAA29;
+}
+
+button#calc-key-plus {
+    background: #00B1CB;
+}
+
+button#calc-key-minus {
+    background: #DB4647;
+}
+
+
+
+/** ARENA TRACKER **/
+.arena-tracker-overlay {
+    background: #5d330be0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
+button#arena-overlay-btn {
+    background: #bc7955;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border: 4px solid #5d330b;
+    border-radius: 0px 10px 10px 0px;
+    font-family: "Fredoka One";
+    border-radius: 5px;
+}
+
+
+
+.win-draw-lose-wrapper {
+    margin-top: 10rem;
+}
+
+.arena-tracker-overlay .win-draw-lose-wrapper .floating-item {
+    justify-content: center;
+}
+
+.arena-tracker-overlay .win-draw-lose-wrapper .floating-item .floating-btn {
+    border-radius: 5px;
+    height: 50px;
+    border-color: #381f07;
+    width: 50px;
+}
+
+.arena-tracker-overlay .win-draw-lose-wrapper .floating-item label {
+    /* padding: 1px; */
+    background: #381f07d4;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    line-height: 50px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    /* border: 2px solid #ffffff; */
+    border-radius: 5px;
+    font-family: "Fredoka One";
+    box-sizing: border-box;
+}
+
+
+/** CARD CALCULATOR **/
+
+.popup {
+    width: 100%;
+    height: 1000%;
+    background: #5d330be0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: none;
+}
+
+.card-tracker-wrapper {
+    padding-top: 0.5rem;
+    border: 2px dashed;
+    padding-left: 10px;
+    margin-top: 10px;
+    border-right: none;
+    padding-bottom: 5px;
+    display: none;
+}
+
+.card-icon-wrapper .floating-btn img {
+    width: 40px;
+    background: #5d330b57;
+    padding: 10px;
+    border-radius: 360px;
+}
+
+.card-icon-wrapper.floating-item {
+    display: block;
+}
+
+.card-icon-wrapper .floating-btn {
+    background: none;
+    border: none;
+    margin-bottom: 25px;
+    background: #865f29;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border: 4px solid #5d330b;
+    border-radius: 5px;
+    font-family: "Fredoka One";
+    font-size: 0.9rem;
+}
+
+.card-icon-wrapper .floating-btn.floating-label {
+    margin-right: 2px;
+    font-size: 1rem;
+    border: none;
+    box-sizing: border-box;
+    background: #5d330b99;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.card-icon-wrapper .floating-btn.red {
+    background: rgb(219 70 71);
+}
+
+
+.card-icon-wrapper .floating-btn.green {
+    background: #479529;
+}
+
+.card-tracker-wrapper label {
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+label#card-txt {
+    background: #8a5440;
+    padding: 10px;
+    border: 2px solid #4f3a33;
+    border-radius: 5px;
+    position: relative;
+    background: rgb(170,99,56);
+    background: rgb(116,73,65);
+    background: radial-gradient(circle, rgba(116,73,65,1) 0%, rgba(170,99,56,1) 100%, rgba(116,73,65,1) 100%);
+}
+
+button#card-minus-icon {
+    margin-top: 3px;
+}
+
+div#card-text-holder h5 {
+    width: 89px;
+    font-size: 11px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+p.current-card {
+    display: block;
+    font-size: 20px;
+    background: #bc7955;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 5px;
+    border: 4px solid #5d330b;
+    background: rgb(170,99,56);
+    background: rgb(116,73,65);
+    background: radial-gradient(circle, rgba(116,73,65,1) 0%, rgba(170,99,56,1) 100%, rgba(116,73,65,1) 100%);
+    text-shadow: 1px 1px 1px black;
+}
+
+.right-floating-widget .floating-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+/** VARIATIONS **/
+.popup-trigger--btn {
+    background: #bc7955;
+    color: white;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    border: 4px solid #5d330b;
+    border-radius: 0px 10px 10px 0px;
+    font-family: "Fredoka One";
+    border-radius: 5px;
+
+}
+
+.variation-icon-wrapper.card-icon-wrapper.floating-item.variation-icon-wrapper button {
+    width: 200px;
+    border: 4px solid #381f07c4;
+}
+
+.variation-icon-wrapper {
+    padding-top: 2rem;
+}
+
+.variation-icon-wrapper.card-icon-wrapper.floating-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.variation-overlay .help-content ul li {
+    font-weight: normal;
+    font-size: 1rem;
+    text-align: left;
+    /* font-family: "Open Sans"; */
+}
+
+.variation-overlay .help-content ul {padding: 1rem;}
+
+
+
+#variation.popup-trigger--btn {
+    background: #7ba58b;
+}
+
+
+/** ARTICLES **/
+.article-wrapper {
+    text-align: left;
+    font-family: "Calibri", "Arial", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: white;
+}
+
+.article-wrapper h1 {
+    text-align: center;
+    font-weight: bold;
+    background: #5d330b;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.article-wrapper h2 {
+    color: #db4647;
+    font-weight: bold;
+    background: #f9c99c;
+    color: #5d330b;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.article-wrapper article {
+    background: #5d330b6b;
+    padding: 1rem;
+}
+
+.article-wrapper article p {
+    margin-bottom: 1rem;
+}
+
+.article-wrapper article h3 {
+    background: #5d330b;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+.article-wrapper article h4 {
+    background: #523f21;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+img.img-responsive {
+    width: 100%;
+}
+
+
+/** PRIVACY POLICY **/
+article.text-content {
+    text-align: left;
+}
+
+article.text-content h3.title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    line-height: 1.3;
+    background: #945f2d;
+}
+
+article.text-content p {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+h1#round-text {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+article.text-content ol li {
+    font-family: sans-serif;
+}
+
+article.text-content ol {
+    list-style-type: disc;
+    margin-left: 2rem;
+    line-height: 1.5;
+}
+
+
+.ads-wrapper{
+    margin-top: 1rem;
+}
